@@ -1182,6 +1182,7 @@ EXTERNAL_LIBRARY_LIST="
     openssl
     x11grab
     zlib
+    vencoder
 "
 
 FEATURE_LIST="
@@ -2032,6 +2033,7 @@ libx264_encoder_deps="libx264"
 libx265_encoder_deps="libx265"
 libxavs_encoder_deps="libxavs"
 libxvid_encoder_deps="libxvid"
+cedarh264_encoder_extralibs="-lvencoder -ldl -L./sunxicedar/lib/A20"
 
 # demuxers / muxers
 ac3_demuxer_select="ac3_parser"
