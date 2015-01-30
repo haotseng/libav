@@ -145,6 +145,7 @@ static av_cold int cedarh264_init(AVCodecContext *avctx)
        base_cfg.input_height = avctx->height;
        base_cfg.dst_width = avctx->width; /* Output size same as input */
        base_cfg.dst_height = avctx->height;
+       base_cfg.maxKeyInterval = 25;
        switch(avctx->pix_fmt){
                case AV_PIX_FMT_YUV420P: base_cfg.inputformat = VENC_PIXEL_YUV420; break;
                case AV_PIX_FMT_RGB32: base_cfg.inputformat = VENC_PIXEL_RGBA; break;
